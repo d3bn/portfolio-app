@@ -1,0 +1,30 @@
+:root {
+  --primary-color: none;
+  --overlay-color: rgba(206, 206, 206, 0.7);
+  --menu-speed: 0.75s;
+  --light-text-color: #444;
+  --disabled-color: #504f4f;
+  --black-color: #000;
+  --white-color: #fff;
+  --hero-color: black;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body,
+#root {
+  height: 100%;
+  flex-grow: 1;
+}
+
+html,
+body,
+#root {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
