@@ -29,11 +29,12 @@ const router = createHashRouter([
       {
         path: ROUTES.WILDCARD_NOT_FOUND,
         element: <NotFound />,
-      },{
+      },
+      {
         path: ROUTES.NOT_FOUND,
         element: <NotFound />,
       },
-    ]
+    ],
   },
 ]);
 

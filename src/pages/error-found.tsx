@@ -8,7 +8,7 @@ import logoSvg from "../assets/logo.svg";
 function ErrorFound({ error, resetErrorBoundary }: FallbackProps) {
   return (
     <div css={wrapperCss}>
-      <img src={logoSvg} css={logoCss} alt="Error Page!" />
+      <img src={logoSvg} css={logoCss} alt="Error Page!" loading="lazy" />
       <h3>The page has been assimilated. Resistance is futile.</h3>
       <p css={errorMessageCss}>{error.message}</p>
       <button

@@ -7,7 +7,7 @@ import ROUTES from "../config/routes";
 function NotFound() {
   return (
     <div css={wrapperCss}>
-      <img src={logoSvg} css={logoCss} alt="Dennis Basan" />
+      <img src={logoSvg} css={logoCss} alt="Dennis Basan" loading="lazy" />
       <h3>Daddy, chill.</h3>
       <p>The page you seek is in another castle. Keep exploring!</p>
       <p>Open this <Link to={ROUTES.HOME}>Door</Link>.</p>

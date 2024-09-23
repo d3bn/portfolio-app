@@ -1,6 +1,8 @@
+import { lazy } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Outlet } from "react-router-dom";
-import ErrorFound from "../pages/error-found";
+
+const ErrorFound = lazy(() => import("../pages/error-found"));
 
 function ErrorHandlerProvider() {
   return (

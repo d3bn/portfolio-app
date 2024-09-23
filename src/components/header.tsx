@@ -1,15 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import Menu from "./menu/menu";
 import logoSvg from '../assets/logo.svg';
+import ROUTES from "../config/routes";
+import Menu from "./menu/menu";
 
 function Header() {
 
   return (
     <div css={wrapperCss}>
-      <Link to={"/"} css={linkCss}>
-        <img src={logoSvg} css={logoCss} alt="Dennis BASAN" />
+      <Link to={ROUTES.HOME} css={linkCss}>
+        <img src={logoSvg} css={logoCss} loading="lazy" alt="Dennis BASAN" />
       </Link>
       <Menu />
     </div>
