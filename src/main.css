@@ -6,22 +6,21 @@
   --dark-text-color: #eeeeee;
   --disabled-color: #504f4f;
   --dark-color: #211d01;
-  --white-color: #fAf9f6;
+  --white-color: #faf9f6;
 }
 
-html {
+html,
+body {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-body,
 #root {
-  height: 100%;
+  height: inherit;
   flex-grow: 1;
 }
 
-html,
 body,
 #root {
   font-family: "Montserrat", sans-serif;

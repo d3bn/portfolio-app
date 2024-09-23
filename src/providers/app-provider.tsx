@@ -23,12 +23,12 @@ const containerCss = css`
   height: 100%;
 
   > * {
-    margin: 2em;
+    padding: 2em;
   }
 
   @media (min-width: 1024px) {
     > * {
-      margin: 3em;
+      padding: 3em;
     }
   }
 `;
