@@ -18,7 +18,7 @@ function Home() {
           rel="noopener noreferrer"
           to="https://staizen.com"
         >
-          <strong>Staizen LTD.</strong>
+          <strong>Staizen</strong>
         </Link>
         , as part of Frontend Community building web application for different
         companies we are working with.
