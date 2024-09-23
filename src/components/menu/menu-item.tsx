@@ -35,7 +35,7 @@ const wrapperItemCss = css`
 
 const linkCss = (disabled: boolean) => css`
   > * {
-    color: var(${disabled ? "--disabled-color" : "--black-color"});
+    color: var(${disabled ? "--disabled-color" : "--dark-color"});
     text-decoration: none;
     transition: color 0.4s ease;
     font-size: 26px;

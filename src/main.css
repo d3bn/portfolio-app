@@ -1,12 +1,12 @@
 :root {
   --primary-color: none;
-  --overlay-color: rgba(238, 238, 238, 0.9);
+  --overlay-color: rgba(250, 249, 249, 0.9);
   --menu-speed: 0.75s;
   --light-text-color: #444;
   --dark-text-color: #eeeeee;
   --disabled-color: #504f4f;
-  --black-color: #000;
-  --white-color: #fff;
+  --dark-color: #211d01;
+  --white-color: #fAf9f6;
 }
 
 html {
@@ -27,4 +27,6 @@ body,
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
+  background-color: var(--white-color);
+  color: var(--dark-color);
 }

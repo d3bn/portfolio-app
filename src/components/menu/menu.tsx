@@ -60,7 +60,7 @@ const menuIconCss = css`
   position: relative;
   width: 100%;
   height: 2px;
-  background: var(--black-color);
+  background: var(--dark-color);
   transition: all 0.4s ease-in-out;
   border-radius: 1px;
 
