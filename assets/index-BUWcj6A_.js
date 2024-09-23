@@ -194,12 +194,12 @@ Error generating stack: `+i.message+`
   height: 100%;
 
   > * {
-    margin: 2em;
+    padding: 2em;
   }
 
   @media (min-width: 1024px) {
     > * {
-      margin: 3em;
+      padding: 3em;
     }
   }
 `,P1=Te`
@@ -229,4 +229,4 @@ Error generating stack: `+i.message+`
   margin: 0;
   cursor: pointer;
   font: inherit;
-`;function z1(){return Se.jsx(R1,{fallbackRender:e=>Se.jsx(T1,{...e}),children:Se.jsx(ks,{})})}function F1(){return Se.jsx(C.Suspense,{fallback:Se.jsx(Se.Fragment,{children:"Loading..."}),children:Se.jsx(ks,{})})}const I1=C.lazy(()=>Bp(()=>import("./home-Bc5EdX1j.js"),[])),Pf=C.lazy(()=>Bp(()=>import("./not-found-BD9z6U_k.js"),[])),j1=U0([{element:Se.jsx(F1,{}),children:[{element:Se.jsx(z1,{}),children:[{element:Se.jsx(k1,{}),children:[{path:kr.HOME,element:Se.jsx(I1,{})}]}]},{path:kr.WILDCARD_NOT_FOUND,element:Se.jsx(Pf,{})},{path:kr.NOT_FOUND,element:Se.jsx(Pf,{})}]}]);function U1(){return Se.jsx(K0,{router:j1})}Ap(document.getElementById("root")).render(Se.jsx(C.StrictMode,{children:Se.jsx(U1,{})}));export{Cs as L,kr as R,pe as a,Te as c,Ur as j,Sh as l};
+`;function z1(){return Se.jsx(R1,{fallbackRender:e=>Se.jsx(T1,{...e}),children:Se.jsx(ks,{})})}function F1(){return Se.jsx(C.Suspense,{fallback:Se.jsx(Se.Fragment,{children:"Loading..."}),children:Se.jsx(ks,{})})}const I1=C.lazy(()=>Bp(()=>import("./home-CA1YDOrF.js"),[])),Pf=C.lazy(()=>Bp(()=>import("./not-found-DlZwzcNq.js"),[])),j1=U0([{element:Se.jsx(F1,{}),children:[{element:Se.jsx(z1,{}),children:[{element:Se.jsx(k1,{}),children:[{path:kr.HOME,element:Se.jsx(I1,{})}]}]},{path:kr.WILDCARD_NOT_FOUND,element:Se.jsx(Pf,{})},{path:kr.NOT_FOUND,element:Se.jsx(Pf,{})}]}]);function U1(){return Se.jsx(K0,{router:j1})}Ap(document.getElementById("root")).render(Se.jsx(C.StrictMode,{children:Se.jsx(U1,{})}));export{Cs as L,kr as R,pe as a,Te as c,Ur as j,Sh as l};
