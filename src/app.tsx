@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import AppProvider from "./providers/app-provider";
 import ErrorHandlerProvider from "./providers/error-handler-provider";
 import LoadingProvider from "./providers/loading-provider";
@@ -8,7 +8,7 @@ import ROUTES from "./config/routes";
 const Home = lazy(() => import("./pages/home"));
 const NotFound = lazy(() => import("./pages/not-found"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <LoadingProvider />,
     children: [

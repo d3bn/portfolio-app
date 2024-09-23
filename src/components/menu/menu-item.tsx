@@ -5,9 +5,10 @@ import { MenuItemType } from "../../@types/menu";
 
 interface MenuItemProps {
   menu: MenuItemType;
+  onClick: () => void;
 }
 
-function MenuItem({ menu }: MenuItemProps): JSX.Element {
+function MenuItem({ menu, onClick }: MenuItemProps): JSX.Element {
   const location = useLocation();
 
   return (
@@ -20,6 +21,7 @@ function MenuItem({ menu }: MenuItemProps): JSX.Element {
       ) : (
         <NavLink
           to={menu.link}
+          onClick={onClick}
           css={location.pathname === menu.link ? activeMenuCss : ""}
         >
           {menu.name}

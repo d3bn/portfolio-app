@@ -27,14 +27,18 @@ function Menu() {
 
   return (
     <>
-      <button onClick={() => setIsMenuOpen((value) => !value)} css={menuCss}>
+      <button onClick={() => setIsMenuOpen((value) => !value)} css={menuCss(isMenuOpen)}>
         <span css={[menuIconCss, isMenuOpen ? animationIconCss : ""]} />
       </button>
 
       <div css={menuWrapperCss(isMenuOpen)}>
         <ul css={menuListCss}>
           {MenuList.map((menu: MenuItemType, index: number) => (
-            <MenuItem menu={menu} key={menu.name + "-" + index} />
+            <MenuItem
+              menu={menu}
+              key={menu.name + "-" + index}
+              onClick={() => setIsMenuOpen(false)}
+            />
           ))}
         </ul>
       </div>
@@ -42,7 +46,7 @@ function Menu() {
   );
 }
 
-const menuCss = css`
+const menuCss = (isMenuOpen: boolean) => css`
   background: none;
   border: none;
   padding: 0;
@@ -54,6 +58,8 @@ const menuCss = css`
   justify-content: center;
   position: relative;
   cursor: pointer;
+
+  z-index: ${isMenuOpen ? 3 : 1};
 `;
 
 const menuIconCss = css`
@@ -124,7 +130,6 @@ const menuWrapperCss = (isMenuOpen: boolean) => css`
   align-items: center;
   justify-content: center;
   background: var(--overlay-color);
-  border-radius: 0 50% 0 0;
   transition: all 0.4s ease;
 `;
 
