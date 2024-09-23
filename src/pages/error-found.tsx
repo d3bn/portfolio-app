@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { FallbackProps } from "react-error-boundary";

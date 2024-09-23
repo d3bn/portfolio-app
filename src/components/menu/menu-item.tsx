@@ -8,7 +8,7 @@ interface MenuItemProps {
   onClick: () => void;
 }
 
-function MenuItem({ menu, onClick }: MenuItemProps): JSX.Element {
+function MenuItem({ menu, onClick }: MenuItemProps) {
   const location = useLocation();
 
   return (
