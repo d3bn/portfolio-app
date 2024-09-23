@@ -10,4 +10,8 @@ export default defineConfig({
       strict: false,
     },
   },
+  build: {
+    outDir: 'build',
+    emptyOutDir: true, // also necessary
+  }
 });
