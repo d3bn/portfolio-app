@@ -11,29 +11,37 @@ function MenuItem({ menu }: MenuItemProps): JSX.Element {
   const location = useLocation();
 
   return (
-    <li css={wrapperItemCss}>
-      <NavLink
-        to={menu.link ?? ""}
-        css={[linkCss(menu.disabled ?? false), location.pathname === menu.link ? activeMenuCss : ""]}
-        aria-disabled={menu.disabled}
-      >
-        {menu.name}
-        {menu.disabled && <small css={disabledTextCss}>coming soon</small>}
-      </NavLink>
+    <li css={[linkCss(menu.disabled ?? false), wrapperItemCss]}>
+      {menu.disabled || menu.link === undefined ? (
+        <span aria-disabled={menu.disabled}>
+          {menu.name}
+          <small css={disabledTextCss}>coming soon</small>
+        </span>
+      ) : (
+        <NavLink
+          to={menu.link}
+          css={location.pathname === menu.link ? activeMenuCss : ""}
+        >
+          {menu.name}
+        </NavLink>
+      )}
     </li>
   );
 }
 
 const wrapperItemCss = css`
-  padding: 0.5em;
+  line-height: 4em;
 `;
 
 const linkCss = (disabled: boolean) => css`
-  color: var(${disabled ? '--disabled-color': '--black-color'});
-  text-decoration: none;
-  transition: color 0.4s ease;
-  font-size: 18px;
-  font-weight: 600;
+  > * {
+    color: var(${disabled ? "--disabled-color" : "--black-color"});
+    text-decoration: none;
+    transition: color 0.4s ease;
+    font-size: 26px;
+    font-weight: 600;
+    cursor: ${disabled ? "not-allowed" : "pointer"};
+  }
 `;
 
 const activeMenuCss = css`

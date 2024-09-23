@@ -30,7 +30,7 @@ function Home() {
 const wrapperCss = css`
   display: flex;
   flex-direction: column;
-  line-height: 1.5em;
+  line-height: 1.8em;
   
   @media (min-width: 1024px) {
     width: calc(100vw / 3);

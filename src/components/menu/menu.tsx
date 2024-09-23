@@ -124,7 +124,7 @@ const menuWrapperCss = (isMenuOpen: boolean) => css`
   align-items: center;
   justify-content: center;
   background: var(--overlay-color);
-  border-radius: 0 35% 0 0;
+  border-radius: 0 50% 0 0;
   transition: all 0.4s ease;
 `;
 
