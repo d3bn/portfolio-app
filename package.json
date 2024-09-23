@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://d3bn.github.io/portfolio-app",
+  "homepage": "https://dennisbasan.com",
   "scripts": {
     "start": "vite --port=4000",
     "build": "tsc -b && vite build",
