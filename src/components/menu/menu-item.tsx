@@ -14,7 +14,7 @@ function MenuItem({ menu, onClick }: MenuItemProps) {
   return (
     <li css={[linkCss(menu.disabled ?? false), wrapperItemCss]}>
       {menu.disabled || menu.link === undefined ? (
-        <span aria-disabled={menu.disabled}>
+        <span aria-disabled={menu.disabled} aria-label={menu.name}>
           {menu.name}
           <small css={disabledTextCss}>coming soon</small>
         </span>
@@ -23,6 +23,7 @@ function MenuItem({ menu, onClick }: MenuItemProps) {
           to={menu.link}
           onClick={onClick}
           css={location.pathname === menu.link ? activeMenuCss : ""}
+          aria-label={menu.name}
         >
           {menu.name}
         </NavLink>

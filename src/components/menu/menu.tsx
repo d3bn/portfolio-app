@@ -27,11 +27,11 @@ function Menu() {
 
   return (
     <>
-      <button onClick={() => setIsMenuOpen((value) => !value)} css={menuCss(isMenuOpen)}>
+      <button onClick={() => setIsMenuOpen((value) => !value)} css={menuCss(isMenuOpen)} type="button" area-label="Menu" title="Menu">
         <span css={[menuIconCss, isMenuOpen ? animationIconCss : ""]} />
       </button>
 
-      <div css={menuWrapperCss(isMenuOpen)}>
+      <nav css={menuWrapperCss(isMenuOpen)}>
         <ul css={menuListCss}>
           {MenuList.map((menu: MenuItemType, index: number) => (
             <MenuItem
@@ -41,7 +41,7 @@ function Menu() {
             />
           ))}
         </ul>
-      </div>
+      </nav>
     </>
   );
 }

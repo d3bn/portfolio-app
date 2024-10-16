@@ -19,7 +19,7 @@ function AppProvider() {
 const containerCss = css`
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
   height: 100%;
 
   > * {
@@ -27,6 +27,8 @@ const containerCss = css`
   }
 
   @media (min-width: 1024px) {
+    gap: 1.5em;
+
     > * {
       padding: 3em;
     }

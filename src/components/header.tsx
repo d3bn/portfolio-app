@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <div css={wrapperCss}>
-      <Link to={ROUTES.HOME} css={linkCss}>
+      <Link to={ROUTES.HOME} css={linkCss} aria-label="Dennis BASAN">
         <img src={logoSvg} css={logoCss} loading="lazy" alt="Dennis BASAN" />
       </Link>
       <Menu />
@@ -29,7 +29,8 @@ const linkCss = css`
 `;
 
 const logoCss = css`
-  width: 90px;
+  width: 60px;
+  vertical-align: middle;
 `;
 
 export default Header;

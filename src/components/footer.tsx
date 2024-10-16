@@ -9,6 +9,7 @@ function Footer() {
         to="https://www.linkedin.com/in/dennisbasan/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn"
       >
         <strong>LinkedIn</strong>
       </Link>
