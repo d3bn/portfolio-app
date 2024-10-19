@@ -27,7 +27,13 @@ function Menu() {
 
   return (
     <>
-      <button onClick={() => setIsMenuOpen((value) => !value)} css={menuCss(isMenuOpen)} type="button" area-label="Menu" title="Menu">
+      <button
+        onClick={() => setIsMenuOpen((value) => !value)}
+        css={menuCss(isMenuOpen)}
+        type="button"
+        area-label="Menu"
+        title="Menu"
+      >
         <span css={[menuIconCss, isMenuOpen ? animationIconCss : ""]} />
       </button>
 

@@ -2,23 +2,35 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { FallbackProps } from "react-error-boundary";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
 import logoSvg from "../assets/logo.svg";
+import ROUTES from "../config/routes";
 
-function ErrorFound({ error, resetErrorBoundary }: FallbackProps) {
+function ErrorFound({ error, resetErrorBoundary }: Partial<FallbackProps>) {
+  const navigate = useNavigate();
+
+  const onClickHandler = useCallback(() => {
+    if (window.history.length) {
+      navigate(ROUTES.HOME);
+
+      return;
+    }
+
+    resetErrorBoundary?.();
+  }, [navigate, resetErrorBoundary]);
+
   return (
     <div css={wrapperCss}>
       <img src={logoSvg} css={logoCss} alt="Error Page!" loading="lazy" />
-      <h3>The page has been assimilated. Resistance is futile.</h3>
-      <p css={errorMessageCss}>{error.message}</p>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          resetErrorBoundary();
-        }}
-        css={resetButtonCss}
-      >
-        <strong>Destroy</strong>
+      <h3>404</h3>
+      <p css={errorMessageCss}>
+        {error?.message ??
+          "The page you seek is in another castle. Keep exploring!"}
+      </p>
+      <button onClick={() => onClickHandler()} css={resetButtonCss}>
+        <strong>Go Back</strong>
       </button>
       .
     </div>

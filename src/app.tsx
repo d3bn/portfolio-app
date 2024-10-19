@@ -6,7 +6,7 @@ import LoadingProvider from "./providers/loading-provider";
 import ROUTES from "./config/routes";
 
 const Home = lazy(() => import("./pages/home"));
-const NotFound = lazy(() => import("./pages/not-found"));
+const ErrorFound = lazy(() => import("./pages/error-found"));
 
 const router = createHashRouter([
   {
@@ -28,11 +28,7 @@ const router = createHashRouter([
       },
       {
         path: ROUTES.WILDCARD_NOT_FOUND,
-        element: <NotFound />,
-      },
-      {
-        path: ROUTES.NOT_FOUND,
-        element: <NotFound />,
+        element: <ErrorFound />,
       },
     ],
   },
