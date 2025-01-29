@@ -9,13 +9,8 @@ function Home() {
       <div css={wrapperCss}>
         <h1>Hi, I'm Dennis.</h1>
         <p>
-          I am a Senior Software Engineer specialize in building exceptional{" "}
-          <strong>web</strong> and <strong>mobile</strong> applications with
-          cutting-edge web technologies. Let's collaborate on your next project
-          and create a seamless user experience across all devices.
-        </p>
-        <p>
-          Currently i work at{" "}
+          I am a Senior Software Engineer specialize in building <strong>web</strong> and <strong>mobile</strong> applications with
+          cutting-edge web technologies. From the mesmerizing frontend to the hidden depths of backend implementation, Currently i work at{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
