@@ -10,10 +10,10 @@ const ErrorFound = lazy(() => import("./pages/error-found"));
 
 const router = createHashRouter([
   {
-    element: <LoadingProvider />,
+    element: <ErrorHandlerProvider />,
     children: [
       {
-        element: <ErrorHandlerProvider />,
+        element: <LoadingProvider />,
         children: [
           {
             element: <AppProvider />,
