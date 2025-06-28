@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { createHtmlPlugin } from "vite-plugin-html";
@@ -13,5 +14,10 @@ export default defineConfig({
   base: "/",
   build: {
     outDir: "build",
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/test-setup.ts",
   },
 });

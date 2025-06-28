@@ -3,6 +3,7 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+import vitest from "eslint-plugin-vitest";
 
 export default tseslint.config(
   { ignores: ["dist"] },
@@ -40,6 +41,25 @@ export default tseslint.config(
         },
       ],
       "@typescript-eslint/consistent-type-definitions": "off",
+    },
+  },
+  {
+    files: ["src/**/*.test.{ts,tsx}"],
+    plugins: {
+      vitest: vitest,
+    },
+    extends: [vitest.configs.recommended],
+    languageOptions: {
+      globals: {
+        ...globals.vitest,
+        ...globals.jest,
+      },
+    },
+    rules: {
+      "vitest/no-disabled-tests": "warn",
+      "vitest/no-focused-tests": "error",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
     },
   }
 );
