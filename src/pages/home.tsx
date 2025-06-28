@@ -25,6 +25,7 @@ function Home() {
       <img
         src={BannerImg}
         title="Dennis Basan | Software Developer"
+        alt="Dennis Basan | Software Developer Banner"
         css={bannerCss}
       />
     </div>

@@ -24,7 +24,7 @@ function ErrorFound({ error, resetErrorBoundary }: Partial<FallbackProps>) {
   return (
     <div css={wrapperCss}>
       <img src={logoSvg} css={logoCss} alt="Error Page!" loading="lazy" />
-      <h3>404</h3>
+      <h1>404</h1>
       <p css={errorMessageCss}>
         {error?.message ??
           "The page you seek is in another castle. Keep exploring!"}
