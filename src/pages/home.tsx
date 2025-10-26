@@ -9,17 +9,19 @@ function Home() {
       <div css={wrapperCss}>
         <h1>Hi, I'm Dennis.</h1>
         <p>
-          I am a Senior Software Engineer specialize in building <strong>web</strong> and <strong>mobile</strong> applications with
-          cutting-edge web technologies. From the mesmerizing frontend to the hidden depths of backend implementation, Currently i work at{" "}
+          I am a Senior Software Engineer specialize in building{" "}
+          <strong>web</strong> and <strong>mobile</strong> applications with
+          cutting-edge web technologies. From the mesmerizing frontend to the
+          hidden depths of backend implementation, Currently i work at{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            to="https://staizen.com"
+            to="https://pragma.team"
           >
-            <strong>Staizen</strong>
+            <strong>pragma.team</strong>
           </Link>
-          , as part of Frontend Community building web application for different
-          companies we are working with.
+          , as part of Software Engineering community building web and mobile
+          applications for different companies.
         </p>
       </div>
       <img
